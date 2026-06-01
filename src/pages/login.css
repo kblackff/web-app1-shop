@@ -1,0 +1,91 @@
+.modalbox {
+    width: 100%;
+    height: auto;
+}
+
+.modalbox input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 0 10px 4px;
+    margin: 5px 0 15px 0;
+    background: #0e131d;
+}
+
+.btn {
+    left: 0;
+    width: 6vw;
+    border-radius: 5px;
+    font-size: 0.65em;
+    padding: 4px 0 4px 0;
+    line-height: 0.8;
+    font-weight: bold;
+}
+
+.btncon {
+    display: flex;
+    justify-content: space-between;
+    max-height: 2em;
+    text-overflow: ellipsis;
+
+    a {
+        font-size: 12px;
+        width: 50%;
+        line-height: 1.2;
+    }
+}
+
+.modalbox button[type=submit] {
+    margin: 15px 0 auto;
+    position: absolute;
+    left: 55px;
+    width: 70%;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border: none;
+    outline: none;
+}
+
+.btn:focus button[type=submit]:focus {
+    outline: none;
+}
+
+#root dialog {
+    position: relative;
+    margin: auto;
+}
+
+dialog:open {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+dialog {
+    width: 300px;
+    height: auto;
+    border: none;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: 
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out,
+    display 0.4s ease-out allow-discrete,
+    overlay 0.4s ease-out allow-discrete;
+    margin: 10px 0 10px 0;
+    background: #ddd;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background-color: transparent;
+    transition: 
+        display 0.4s allow-discrete,
+        overlay 0.4s allow-discrete,
+        background-color 0.4s;
+}
+
+dialog > footer {
+    display: flexbox;
+    align-content: flex-end;
+}

@@ -1,0 +1,80 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0e131d;
+  overflow-x: hidden;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color1: #646E87;
+  --color2: #939DB8;
+  --color3: #0B0C14;
+  --font-sans: ui-sans-serif, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-neutral-50: #EAECF1;
+  --color-neutral-70: #E6EAEF;
+  --color-neutral-100: #B8BFD1;
+  --color-neutral-200: #939DB8;
+  --color-neutral-300: #646E87;
+  --color-neutral-400: #4E576E;
+  --color-neutral-500: #3B4254;
+  --color-neutral-600: #2F3647;
+  --color-neutral-700: #293040;
+  --color-neutral-800: #222838;
+  --color-neutral-900: #121826;
+  --color-gray-900: oklch(0.21 0.034 264.665);
+  --color4: #0b0c14cc;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  color: #939DB8;
+}
+
+a:hover {
+  color: #b3b6e9;
+}
+
+button {
+  border-radius: 15px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color4);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--color1);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  border-color: #747bff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #e6edf5;;
+  }
+  
+  button {
+    background-color: #f9f9f9;
+  }
+}
