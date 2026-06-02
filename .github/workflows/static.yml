@@ -41,6 +41,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Setup vite build entry file
+        shell: PowerShell
         run: |
           move ./dist/client/index.html ./dist
       - name: Setup Pages
