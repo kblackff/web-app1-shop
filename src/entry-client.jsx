@@ -18,21 +18,21 @@ hydrateRoot(
     <Router>
       <Routes>
         <Route 
-          path='/home'
+          path='/web-app1-shop/home'
           element={<App />}
         />
         <Route
           exact
-          path='/login'
+          path='/web-app1-shop/login'
           element={<LoginComponent />}
         />
         <Route
-          path='/register'
+          path='/web-app1-shop/register'
           element={<LoginComponent RegComp={true} />}
         />
         <Route
           path='*'
-          element={<Navigate to={'/login'} />}
+          element={<Navigate to={'/web-app1-shop/login'} />}
         />
         <Route render={() => <h1>404: page not found</h1>} />
       </Routes>
