@@ -4,4 +4,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/web-app1-shop/'
 })
+
+// set base path in packageJN build
