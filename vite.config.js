@@ -6,5 +6,3 @@ export default defineConfig({
   plugins: [react()],
   base: '/web-app1-shop/'
 })
-
-// set base path in packageJN build
