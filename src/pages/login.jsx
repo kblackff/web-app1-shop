@@ -201,7 +201,7 @@ return (
                   />
                 <div className='btncon'>
                     {!register && (<button className='btn' type='button' onClick={handleLegacy}>Use legacy</button>)}
-                    <a href={!register ?'/register' : '/login'}>
+                    <a href={!register ?'/web-app1-shop/register' : '/web-app1-shop/login'}>
                     {!register ? 
                     'don\'t have an account? go to register' : 'have an account? go to login'}
                     </a>
