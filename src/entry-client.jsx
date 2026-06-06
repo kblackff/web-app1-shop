@@ -23,7 +23,7 @@ hydrateRoot(
         />
         <Route
           exact
-          path='/'
+          path='/login'
           element={<LoginComponent />}
         />
         <Route
@@ -32,7 +32,7 @@ hydrateRoot(
         />
         <Route
           path='*'
-          element={<Navigate to={'/'} />}
+          element={<Navigate to={'/login'} />}
         />
         <Route render={() => <h1>404: page not found</h1>} />
       </Routes>
