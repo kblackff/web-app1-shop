@@ -1,6 +1,7 @@
 {
   "name": "web-app-1",
   "private": true,
+  "homepage": "https://kblackff.github.io/web-app1-shop/",
   "version": "1.0.0",
   "description": "e-commerce web application",
   "type": "module",

@@ -56,7 +56,7 @@ function LoginComponent({ RegComp }) {
                         titleText: 'Login success',
                         showConfirmButton: false,
                         willOpen: ()=> Swal.showLoading(),
-                        willClose: ()=> window.location.href = '/web-app1-shop/home'
+                        willClose: ()=> window.location.href = '/home'
                     })
                 }
                 if(!res.ok) {
@@ -94,7 +94,7 @@ function LoginComponent({ RegComp }) {
                         swalN.textContent = `email:`+ ' ' + `${info.email}`
                     },
                     willClose: ()=> modal.showModal(),
-                    didClose: ()=> location.href='/web-app1-shop/login'
+                    didClose: ()=> location.href='/'
                 })
             })
         } else{
@@ -201,7 +201,7 @@ return (
                   />
                 <div className='btncon'>
                     {!register && (<button className='btn' type='button' onClick={handleLegacy}>Use legacy</button>)}
-                    <a href={!register ?'/web-app1-shop/register' : '/web-app1-shop/login'}>
+                    <a href={!register ?'/register' : '/'}>
                     {!register ? 
                     'don\'t have an account? go to register' : 'have an account? go to login'}
                     </a>
