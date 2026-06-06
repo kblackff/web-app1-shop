@@ -94,7 +94,7 @@ function LoginComponent({ RegComp }) {
                         swalN.textContent = `email:`+ ' ' + `${info.email}`
                     },
                     willClose: ()=> modal.showModal(),
-                    didClose: ()=> location.href='/'
+                    didClose: ()=> location.href='/login'
                 })
             })
         } else{
@@ -201,7 +201,7 @@ return (
                   />
                 <div className='btncon'>
                     {!register && (<button className='btn' type='button' onClick={handleLegacy}>Use legacy</button>)}
-                    <a href={!register ?'/register' : '/'}>
+                    <a href={!register ?'/register' : '/login'}>
                     {!register ? 
                     'don\'t have an account? go to register' : 'have an account? go to login'}
                     </a>
