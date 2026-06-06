@@ -40,17 +40,13 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Setup vite build entry file
-        shell: pwsh
-        run: |
-          move ./dist/client/index.html ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload build dist folder
-          path: './dist'
+          path: './dist/client'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
