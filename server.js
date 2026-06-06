@@ -8,11 +8,11 @@ import routes from './src/serverMiddleware/routes/router.js'
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 5173
-const base = process.env.BASE || '/web-app1-shop/'
+const base = process.env.BASE || '/'
 
 // Cached production assets
 const templateHtml = isProduction
-  ? await fs.readFile('./dist/index.html', 'utf-8')
+  ? await fs.readFile('./dist/client/index.html', 'utf-8')
   : ''
 
 // Create http server
@@ -35,7 +35,7 @@ if (!isProduction) {
   const compression = (await import('compression')).default
   const sirv = (await import('sirv')).default
   app.use(compression())
-  app.use(base, sirv('./dist', { extensions: [] }))
+  app.use(base, sirv('./dist/client', { extensions: [] }))
 }
 
 app.use('/user', routes)
