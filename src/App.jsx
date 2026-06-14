@@ -3,11 +3,11 @@ import IMG from './pages/slides'
 import SwalM from './pages/alert24'
 import { handleCheckAmt, handlePayts } from './payments/paystackpop'
 import { HeaderImg, hero } from './assets/images.js'
+import { products } from './assets/database/dataV1.js'
 
 import './App.css'
 
 function App() {
-  const [ products, setProducts ] = useState([{}])
   const [ cartItem, setCartItem ] = useState([])
   const [ cartState, setCartState ] = useState(false)
   const [ checkout, setCheckout ] = useState(0)
@@ -25,11 +25,6 @@ function App() {
     const setdateH = Pref.current 
     
     if(!ignore) {
-      fetch('/api/products')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-    }
-
     $cartV.addEventListener('click', ()=> cartOpen.style.display='block')
     spanN.addEventListener('click', ()=> cartOpen.style.display='none')
     payCheck.addEventListener('click', ()=> cartOpen.style.display='none')
@@ -38,6 +33,7 @@ function App() {
       cartOpen.style.display = 'none'
     }
   })
+}
   setdateH.innerHTML = `&copy; ${dMYY} Inc. All rights reserved`
 
   return () => ignore=true
@@ -113,7 +109,7 @@ function App() {
     return (cartstate != true ? null :
       cartItem.map((itm, inx) => {
         const reg = itm.price.match(/\d+/i)
-        reg.forEach(vaul => { setCheckout((num += parseInt(vaul))) })
+        reg.forEach(vaul => {setCheckout((num += parseInt(vaul))/2)})
         return (
         <div id='cart-item' key={inx+1}>
           <img src={itm.image} />
@@ -171,7 +167,7 @@ function App() {
         <div className="cart-popup" id="cart-popup">
           <div className='cartbox'>
             <div><span className='close'>&times;</span>
-            {(!cartState) && <h3 id='textC'><em>{textC ?'Add to your cart' : 'Cart Order success\n You can add new items'}</em></h3>}
+            {(!cartState) && <h3 id='textC'><em>{!textC ?'Add to your cart' : 'Cart Order success\n You can add new items'}</em></h3>}
               <CartItem cartstate={cartState} /></div>
               <div className='bfg'>
                 <button onClick={async()=> {

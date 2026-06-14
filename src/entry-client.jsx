@@ -17,22 +17,10 @@ hydrateRoot(
   <StrictMode>
     <Router>
       <Routes>
-        <Route 
-          path='/home'
-          element={<App />}
-        />
         <Route
           exact
-          path='/login'
+          path='/Web-app1-shop'
           element={<LoginComponent />}
-        />
-        <Route
-          path='/register'
-          element={<LoginComponent RegComp={true} />}
-        />
-        <Route
-          path='*'
-          element={<Navigate to={'/login'} />}
         />
         <Route render={() => <h1>404: page not found</h1>} />
       </Routes>

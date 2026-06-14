@@ -6,34 +6,34 @@
   "description": "e-commerce web application",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "dev": "vite",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/client/server",
-    "preview": "cross-env NODE_ENV=production node server"
+    "preview": "cross-env NODE_ENV=production vite"
   },
-  
   "dependencies": {
     "@paystack/inline-js": "^2.22.8",
-    "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongodb": "^7.2.0",
-    "mongoose": "^9.4.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.2",
     "sirv": "^3.0.2",
     "sweetalert2": "^11.26.24",
-    "swiper": "^12.1.4"
+    "swiper": "^12.1.4",
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "bcrypt": "^6.0.0",
     "cross-env": "^10.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.3.0",
+    "mongoose": "^9.7.0",
     "vite": "^8.0.3"
   }
 }

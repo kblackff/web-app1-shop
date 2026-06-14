@@ -10,8 +10,9 @@ Integrates JSONWebToken for authentication
 
 
 ## features
+It works about a login page to access the store 
 
-It works about a login page to access the store and provides a legacy login user
+provides a legacy login user account to access the store 
 
 provides a register page to create an account
 
