@@ -28,7 +28,7 @@ function LoginComponent({ RegComp }) {
             })
         if(!register) {
         try{
-          const token = authLogin(email, password, userLogin)
+          const token = await authLogin(email, password, userLogin)
           if(token) {
                     Swal.fire({ 
                         timer: 2000,
@@ -54,10 +54,9 @@ function LoginComponent({ RegComp }) {
         }
     }else {
         try {
-            const newUser = new AuthDB(email, password, userLogin)
-                if(newUser){
+            const newUser = await new AuthDB(email, password, userLogin)
+                if(newUser){ 
                 setUserLogin([...userLogin, newUser])
-                console.log(userLogin)
                 SwalReg2.fire({
                     icon: 'success',
                     footer: `<h4>redirecting...</h4>`,
