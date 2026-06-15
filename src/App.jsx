@@ -109,7 +109,7 @@ function App() {
     return (cartstate != true ? null :
       cartItem.map((itm, inx) => {
         const reg = itm.price.match(/\d+/i)
-        reg.forEach(vaul => {setCheckout((num += parseInt(vaul))/2)})
+        reg.forEach(vaul => {setCheckout((num += parseInt(vaul)))})
         return (
         <div id='cart-item' key={inx+1}>
           <img src={itm.image} />

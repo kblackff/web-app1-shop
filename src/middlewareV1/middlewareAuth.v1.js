@@ -22,7 +22,6 @@ const authLogin = (useremail, userpassword, arr) => {
     try {
         let accessToken
         const authuser = arr.filter(authuser => authuser.email === useremail)
-        console.log(authuser)
             if(authuser && authuser.some((auth)=> (uuidv5(userpassword, NAMESPACE_URL_V1) == auth.password))){ 
             accessToken=true
             return accessToken
