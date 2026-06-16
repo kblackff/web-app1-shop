@@ -8,6 +8,8 @@ and a sever backend (SSR) using Node.js + Express that Vite supports
 Uses Mongodb to provide database 
 Integrates JSONWebToken for authentication
 
+Read.md and view web [live]( https://kbdev-gweb-app1-shop.netlify.app/ ) or [github pages]( https://kblackff.github.io/web-app1-shop/ )
+
 
 ## features
 It works about a login page to access the store 
